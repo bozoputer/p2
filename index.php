@@ -7,6 +7,8 @@
     <title>E Boone | Project 2 | CSCI E-15</title>
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <?php require 'logic.php'; ?>
 </head>
 <body>
 <div class="row">
