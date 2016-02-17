@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E Boone | Project 2 | CSCI E-15</title>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <div class="row">
