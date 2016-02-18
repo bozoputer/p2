@@ -11,12 +11,37 @@
     <?php require 'logic.php'; ?>
 </head>
 <body>
-<div class="row">
-  <div class="large-12 columns">
-    <h1>Welcome to Foundation</h1>
-  </div>
-</div>
+<form method="get" action="index.php">
+    <div class="row">
+        <div class="small-12 medium-4 columns">
+            <label>Number of words
+                <input type="number" placeholder="Enter a number between 3 and 5">
+            </label>
+        </div>
+        <fieldset class="small-12 columns">
+            <legend>Include a Number?</legend>
+            <input type="radio" name="numberYesOrNo" value="yes">
+                <label for="yes">Yes</label>
+            <input type="radio" name="numberYesOrNo" value="no">
+                <label for="no">No</label>
+        </fieldset>
+        <fieldset class="small-12 columns">
+            <legend>Include a Symbol (e.g., #)?</legend>
+            <input type="radio" name="symbolYesOrNo" value="yes">
+                <label for="yes">Yes</label>
+            <input type="radio" name="symbolYesOrNo" value="no">
+                <label for="no">No</label>
+        </fieldset>
+    </div>
+    <div class="row">
 
+    </div>
+    <div class="row">
+        <div class="small-4 columns">
+            <button type="submit" class="button">Submit</button>
+        </div>
+    </div>
+</form>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/what-input/what-input.js"></script>
 <script src="bower_components/foundation-sites/dist/foundation.js"></script>
