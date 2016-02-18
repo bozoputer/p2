@@ -25,7 +25,7 @@ This project is a password generator created for the Harvard Extension School co
 
 ###Help
 
-+ [Stack Overflow](http://stackoverflow.com/questions/17525288/php-print-out-error-on-specific-div)
++ [Stack Overflow](http://stackoverflow.com/questions/17525288/php-print-out-error-on-specific-div) (Specifically, lines 33 and 66-68 in index.php).
 + [PHP Docs](http://php.net) 
 + [W3Schools](http://www.w3schools.com/php/func_string_implode.asp) 
 
