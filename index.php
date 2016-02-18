@@ -1,3 +1,9 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -11,11 +17,11 @@
     <?php require 'logic.php'; ?>
 </head>
 <body>
-<form method="get" action="index.php">
+<form action="index.php" method="GET">
     <div class="row">
         <div class="small-12 medium-4 columns">
             <label>Number of words
-                <input type="number" placeholder="Enter a number between 3 and 5">
+                <input type="number" name="numberOfWords" placeholder="Enter a number between 3 and 5">
             </label>
         </div>
         <fieldset class="small-12 columns">
@@ -38,7 +44,7 @@
     </div>
     <div class="row">
         <div class="small-4 columns">
-            <button type="submit" class="button">Submit</button>
+            <button type="submit" class="button">Get Password</button>
         </div>
     </div>
 </form>
