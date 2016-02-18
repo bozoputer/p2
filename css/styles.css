@@ -38,8 +38,9 @@ main {
   padding: 0; }
 
 .errors p {
-  color: red;
-  font-size: 1.25rem; }
+  color: #fffe3d;
+  font-size: 1.25rem;
+  font-weight: bold; }
 
 .password {
   text-align: center;
