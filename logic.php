@@ -2,46 +2,95 @@
 
 #Create array of words to generate password from
 $words = [
-     "aardvark"     => 01,
-     "banana"       => 02,
-     "champion"     => 03,
-     "didgeridoo"   => 04,
-     "equestrian"   => 05,
-     "frolic"       => 06,
-     "gregorian"    => 07,
-     "history"      => 08,
-     "imbecile"     => 09,
-     "jingo"        => 10,
-     "kindergarten" => 11,
-     "lambast"      => 12,
-     "microphone"   => 13,
-     "nativity"     => 14,
-     "ostracize"    => 15,
-     "preliminary"  => 16,
-     "quotidian"    => 17,
-     "rastafarian"  => 18,
-     "solstice"     => 19,
-     "tranquil"     => 20,
-     "umbrage"      => 21,
-     "victorian"    => 22,
-     "waxen"        => 23,
-     "xanadu"       => 24,
-     "yesteryear"   => 25,
-     "zither"       => 26
+     "ant"  => 01,
+     "boy"  => 02,
+     "cry"  => 03,
+     "dab"  => 04,
+     "ear"  => 05,
+     "fib"  => 06,
+     "gut"  => 07,
+     "hen"  => 08,
+     "imp"  => 09,
+     "joy"  => 10,
+     "koi"  => 11,
+     "lap"  => 12,
+     "mud"  => 13,
+     "nod"  => 14,
+     "owl"  => 15,
+     "pap"  => 16,
+     "qua"  => 17,
+     "rat"  => 18,
+     "sun"  => 19,
+     "toy"  => 20,
+     "urn"  => 21,
+     "van"  => 22,
+     "wax"  => 23,
+     "xis"  => 24,
+     "yep"  => 25,
+     "zit"  => 26
 ];
 
-#Declare variable to store number of words user selected
-$length = $_GET['numberOfWords'];
+#Declare variables to store user selections from form
+$passwordLength = $_GET['numberOfWords'];
+$addNumber = $_GET['numberYesOrNo'];
+$addSymbol = $_GET['symbolYesOrNo'];
 
-#Ensure user input is valid
-if(!empty($length)) {
-    if (!is_numeric($length)) {
-        echo '<p style="color:blue">Sorry, ' . "$length" . ' is not a number. Please try again</p>';
-    } elseif ($length < 3 || $length > 5) {
+/*
+* Ensure user input for number of words is valid
+* If user input is valid create a temporary password
+*/
+
+if(!empty($passwordLength)) {
+    if (!is_numeric($passwordLength)) {
+        echo '<p style="color:blue">Sorry, ' . "$passwordLength" . ' is not a number. Please try again.</p>';
+    } elseif ($passwordLength < 3 || $passwordLength > 5) {
         echo '<p style="color:red;">Please enter 3, 4, or 5</p>';
+    } elseif (!isset($addNumber) || !isset($addSymbol)) {
+        echo '<p style="color:red;">All fields are required. Please try again.</p>';
+    } else {
+        $tempPassword = array_rand($words, $passwordLength);
+        $tempPassword = implode("-",$tempPassword);
     }
 } else {
     echo '<p style="color:red;">Please choose password length.</p>';
 }
+
+#Generate random number to add to temporary password if user chooses
+$number = rand(1, 99);
+
+/*
+* Create an array of symbols to draw from
+* in case user selects the 'add symbol' option
+*/
+$symbol = [
+    "!" => 1,
+    "@" => 2,
+    "#" => 3,
+    "$" => 4,
+    "%" => 5,
+    "^" => 6,
+    "&" => 7,
+    "*" => 8
+];
+
+#Convert symbol array into a string
+$symbolAsString = implode('', $symbol);
+
+#Randomly select a symbol from the converted string
+$symbolAsString = array_rand($symbol, 1);
+
+
+#Add number and/or symbol (or neither) to temporary password
+if ($addNumber == 'yes' && $addSymbol == 'no') {
+    $finalPassword = $tempPassword . $number;
+} elseif ($addNumber == 'yes' && $addSymbol == 'yes') {
+    $finalPassword = $tempPassword . $number . $symbolAsString;
+} elseif ($addNumber == 'no' && $addSymbol == 'yes') {
+    $finalPassword = $tempPassword . $symbolAsString;
+} else {
+    $finalPassword = $tempPassword;
+}
+
+echo $finalPassword;
 
 ?>
