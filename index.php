@@ -12,14 +12,19 @@
     <title>E Boone | Project 2 | CSCI E-15</title>
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn:700,700italic|Exo+2:500,400' rel='stylesheet' type='text/css'>
 
     <?php require 'logic.php'; ?>
 </head>
 <body>
 <main>
-    <h1>Password Generator</h1>
-    <div class="intro">
-        <p>This is an <a href="http://xkcd.com/936/">xkcd-style</a> password generator. You can choose a password comprised of three, four, or five words, and also a number and/or symbol.</p>
+    <div class="row">
+        <div class="small-12 medium-10 columns intro">
+            <h1>Password Generator</h1>
+            <div>
+                <p>This is an <a href="http://xkcd.com/936/">xkcd-style</a> password generator. You can choose a password comprised of three, four, or five words, and also a number and/or symbol.</p>
+            </div>
+        </div>
     </div>
 
     <form action="index.php" method="GET">

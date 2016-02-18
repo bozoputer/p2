@@ -2,10 +2,15 @@ body {
   width: 100%;
   height: auto;
   background-image: radial-gradient(circle at top, #374A99, #37AF96);
-  color: #fff; }
+  color: #fff;
+  font-family: "Exo 2", sans-serif; }
 
 p, h1 {
   padding-left: 10px; }
+
+h1 {
+  font-family: Vollkorn, serif;
+  padding-top: 1.5rem; }
 
 a {
   color: #fff; }
@@ -28,6 +33,9 @@ legend, label {
 main {
   margin: 0 auto;
   display: block; }
+
+.intro {
+  padding: 0; }
 
 .errors p {
   color: red;
