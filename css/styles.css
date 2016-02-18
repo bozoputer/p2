@@ -1,0 +1,38 @@
+body {
+  width: 100%;
+  height: auto;
+  background-image: radial-gradient(circle at top, #374A99, #37AF96);
+  color: #fff; }
+
+p, h1 {
+  padding-left: 10px; }
+
+a {
+  color: #fff; }
+  a:hover {
+    color: #fff;
+    text-decoration: underline; }
+
+.button {
+  background-color: #fff;
+  color: #37A696;
+  font-weight: bold; }
+
+.button:hover, .button:focus {
+  background-color: #37A696;
+  color: #fff; }
+
+legend, label {
+  color: #fff; }
+
+main {
+  margin: 0 auto;
+  display: block; }
+
+.errors p {
+  color: red;
+  font-size: 1.25rem; }
+
+.password {
+  text-align: center;
+  font-size: 3rem; }
