@@ -21,7 +21,7 @@ ini_set('display_errors', 1);
     <div class="row">
         <div class="small-12 medium-4 columns">
             <label>Number of words
-                <input type="number" name="numberOfWords" placeholder="Enter a number between 3 and 5">
+                <input type="text" name="numberOfWords" maxlength="1" placeholder="Enter a number between 3 and 5">
             </label>
         </div>
         <fieldset class="small-12 columns">
