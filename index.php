@@ -30,7 +30,10 @@
     <form action="index.php" method="GET">
         <div class="row">
             <div class="small-12 columns errors">
-                <?php echo ((isset($badLength) && $badLength != '') ? $badLength : ''); ?>
+                <?php
+                echo ((isset($badLength) && $badLength != '') ? $badLength : '');
+                echo ((isset($badLength2) && $badLength2 != '') ? $badLength2 : '');
+                ?>
             </div>
             <div class="small-12 medium-4 columns">
                 <label>Number of words

@@ -83,6 +83,8 @@ $symbolAsString = array_rand($symbol, 1);
 #Add number and/or symbol (or neither) to temporary password
 if ($addNumber == 'yes' && $addSymbol == 'no') {
     $finalPassword = $tempPassword . $number;
+} elseif ($addNumber == 'yes' && $addSymbol == 'yes' && $passwordLength == "") {
+    $badLength = '<p class="errors">Please choose password length.</p>';
 } elseif ($addNumber == 'yes' && $addSymbol == 'yes') {
     $finalPassword = $tempPassword . $number . $symbolAsString;
 } elseif ($addNumber == 'no' && $addSymbol == 'yes') {
