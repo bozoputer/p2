@@ -42,17 +42,17 @@ $addSymbol = $_GET['symbolYesOrNo'];
 
 if(!empty($passwordLength)) {
     if (!is_numeric($passwordLength)) {
-        echo '<p style="color:blue">Sorry, ' . "$passwordLength" . ' is not a number. Please try again.</p>';
+        $nonNumber = '<p>Sorry, ' . "$passwordLength" . ' is not a number. Please try again.</p>';
     } elseif ($passwordLength < 3 || $passwordLength > 5) {
-        echo '<p style="color:red;">Please enter 3, 4, or 5</p>';
+        $wrongNumber = '<p >Please enter 3, 4, or 5</p>';
     } elseif (!isset($addNumber) || !isset($addSymbol)) {
-        echo '<p style="color:red;">All fields are required. Please try again.</p>';
+        $blank = '<p>All fields are required. Please try again.</p>';
     } else {
         $tempPassword = array_rand($words, $passwordLength);
         $tempPassword = implode("-",$tempPassword);
     }
 } else {
-    echo '<p style="color:red;">Please choose password length.</p>';
+    $badLength = '<p>Please choose password length.</p>';
 }
 
 #Generate random number to add to temporary password if user chooses
@@ -90,7 +90,5 @@ if ($addNumber == 'yes' && $addSymbol == 'no') {
 } else {
     $finalPassword = $tempPassword;
 }
-
-echo $finalPassword;
 
 ?>
