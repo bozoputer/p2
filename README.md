@@ -19,7 +19,6 @@ This project is a password generator created for the Harvard Extension School co
 
 ###Plugins/libraries/packages/outside code
 + Foundation 6, by [Zurb](http://foundation.zurb.com)
-+ Zurb Foundation [portfolio template](http://foundation.zurb.com/templates-previews-sites-f6/portfolio.html)
 + jQuery (used by Foundation)
 + [Google fonts](http://google.com/fonts) (Vollkorn, Exo 2)
 
@@ -34,4 +33,4 @@ This project is a password generator created for the Harvard Extension School co
 
 
 ###Project demo
-[]()
+[https://youtu.be/KRDPGy0sHXs](https://youtu.be/KRDPGy0sHXs)
